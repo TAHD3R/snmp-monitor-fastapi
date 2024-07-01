@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "snmp-monitor-fastapi"
+version = "1.0.0"
+description = "Monitor API Server for SNMP devices, providing devices info sniffing, wecom notifications, statistics, etc."
+authors = ["Jasar Ayiken <jaasaar@126.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+pydantic = "^2.7.4"
+pydantic-settings = "^2.3.4"
+asgiref = "^3.8.1"
+loguru = "^0.7.2"
+httpx = "^0.27.0"
+
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "primary"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+mypy = "^1.10.1"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
